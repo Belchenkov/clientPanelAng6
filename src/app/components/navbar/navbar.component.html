@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-danger mb-4">
-  <a href="" class="navbar-brand">
+  <a
+    class="navbar-brand"
+    routerLink="/"
+  >
     <img class="mr-3" src="data:image/png;base64,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">
     Client Finance Panel
   </a>
@@ -14,19 +17,19 @@
   <div class="collapse navbar-collapse" id="navbarMain">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a href="" class="nav-link">
+        <a routerLink="/" class="nav-link">
           <i class="fa fa-cogs"></i> Панель администрирования
         </a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="" class="nav-link">
+        <a routerLink="/register" class="nav-link">
           <i class="fa fa-lock"></i> Регистрация
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link">
+        <a routerLink="/login" class="nav-link">
           <i class="fa fa-sign-in"></i> Войти
         </a>
       </li>
