@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+
+nav {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand {
+  font-family: 'Faster One', cursive;
+  font-size: 1.5rem;
+  color: #000;
+  transition: all .3s;
+}
+
+.navbar-brand:hover {
+  color: #000;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  transition: all .3s;
+}
+
+.nav-link {
+  color: #f3e3de!important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  transition: all .3s;
+}
+
+.nav-link:hover {
+  color: #2f2c2d !important;
+  transform: translateX(2px);
+}
