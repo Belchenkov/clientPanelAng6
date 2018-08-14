@@ -1,3 +1,39 @@
-<p>
-  clients works!
-</p>
+<div class="row mb-4">
+  <div class="col-md-6">
+    <h2><i class="fa fa-users"></i> Клиенты</h2>
+  </div>
+  <div class="col-md-6">
+    <h5 class="text-right text-primary">
+      <i class="fa fa-money"></i> Общая задолженность: {{ totalOwed | currency:"USD":"symbol" }}</h5>
+  </div>
+</div>
+<table
+  *ngIf="clients?.length > 0;else noClients"
+  class="text-lg-center table table-striped"
+>
+  <thead class="thead-inverse">
+    <tr class="bg-danger text-white">
+      <th><i class="fa fa-user-circle"></i> Клиент</th>
+      <th><i class="fa fa-envelope"></i> Email</th>
+      <th><i class="fa fa-money"></i> Баланс</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.firstName }} {{ client.lastName }}</td>
+      <td>{{ client.email }}</td>
+      <td>{{ client.balance | currency: "USD":"symbol" }}</td>
+      <td>
+        <a routerLink="client/{{ client.id }}" class="btn btn-outline-primary btn-sm">
+          <i class="fa fa-arrow-circle-o-right"> Подробнее</i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noClients>
+  <hr>
+  <h5 class="text-lg-center">Клиенты не найдены</h5>
+</ng-template>
