@@ -25,7 +25,7 @@ export class AddClientComponent implements OnInit {
   constructor(
     private flashMessage: FlashMessagesService,
     private clientService: ClientService,
-    private router: Router,
+    private router: Router
     ) { }
 
   ngOnInit() {
