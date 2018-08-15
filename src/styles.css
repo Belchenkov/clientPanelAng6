@@ -18,3 +18,8 @@ a#btn-back:hover {
   transform: translateX(-8px);
   transition: all .3s;
 }
+
+.alert p {
+  margin: 0;
+  padding: 0;
+}
