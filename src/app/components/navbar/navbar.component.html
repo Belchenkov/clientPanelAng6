@@ -23,14 +23,33 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!isLoggedIn">
         <a routerLink="/register" class="nav-link">
           <i class="fa fa-lock"></i> Регистрация
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!isLoggedIn">
         <a routerLink="/login" class="nav-link">
           <i class="fa fa-sign-in"></i> Войти
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <span href="#" class="nav-link">
+          <i class="fa fa-user-o"></i> {{ loggedInUser }}
+        </span>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a routerLink="/settings" class="nav-link">
+          <i class="fa fa-cog"></i> Настройки
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a
+          href="#"
+          (click)="onLogoutClick()"
+          class="nav-link"
+        >
+          <i class="fa fa-sign-out"></i> Выйти
         </a>
       </li>
     </ul>
