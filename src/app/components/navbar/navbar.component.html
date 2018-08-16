@@ -16,7 +16,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarMain">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="isLoggedIn">
         <a routerLink="/" class="nav-link">
           <i class="fa fa-cogs"></i> Панель администрирования
         </a>
