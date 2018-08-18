@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { ClientService } from "./services/client.service";
+import { SettingsService } from "./services/settings.service";
 import { AuthService } from "./services/auth.service";
 import { environment } from "../environments/environment";
 import { AngularFireModule } from 'angularfire2';
@@ -49,7 +50,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   providers: [
     ClientService,
-    AuthService
+    AuthService,
+    SettingsService
   ],
   bootstrap: [AppComponent]
 })
