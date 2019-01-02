@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic');
+
+body {
+  font-family: 'Cuprum', sans-serif!important;
+  font-size: 1.1rem!important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.text-sh-black {
+  text-shadow: 0 0 3px #000;
+}
+
+a#btn-back {
+  text-decoration: none;
+  transition: all .3s;
+}
+
+a#btn-back:hover {
+  transform: translateX(-8px);
+  transition: all .3s;
+}
+
+.alert p {
+  margin: 0;
+  padding: 0;
+}
